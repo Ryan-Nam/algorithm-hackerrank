@@ -37,10 +37,10 @@ public class Datatypes {
                 System.out.println(x + " can be fitted in:");
                 if (x >= -128 && x <= 127) System.out.println("* byte");
                 //Complete the code
-                if (x >= -32768 && x <= 32767) System.out.println("* short");
-                if (x >= (int) Math.pow(-2, 31) && x <= ((int) Math.pow(2, 31))-1) System.out.println("* int");
-                if (x >= (int) Math.pow(-2, 63) && x <= ((int) Math.pow(2, 63))-1) System.out.println("* long");
-
+                if(x>=Short.MIN_VALUE && x<=Short.MAX_VALUE) System.out.println("* short");
+                if(x>=Integer.MIN_VALUE && x<=Integer.MAX_VALUE) System.out.println("* int");
+                //if(x>=Long.MIN_VALUE && x<=Long.MAX_VALUE) System.out.println("* long");
+                System.out.println("* long");
             } catch (Exception e) {
                 System.out.println(sc.next() + " can't be fitted anywhere.");
             }
